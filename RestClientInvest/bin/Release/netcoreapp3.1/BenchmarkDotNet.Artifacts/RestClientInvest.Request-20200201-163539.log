@@ -1,0 +1,198 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 1 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet restore  /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 in C:\Users\ujayn\Source\Repos\RestClientInvest\RestClientInvest\bin\Release\netcoreapp3.1\60763fde-b18f-42f1-b479-cebb7d380e76
+// command took 1.27s and exited with 0
+// start dotnet build -c Release  --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 in C:\Users\ujayn\Source\Repos\RestClientInvest\RestClientInvest\bin\Release\netcoreapp3.1\60763fde-b18f-42f1-b479-cebb7d380e76
+// command took 1.85s and exited with 0
+// ***** Done, took 00:00:03 (3.34 sec)   *****
+// Found 1 benchmarks:
+//   Request.MainRequest: DefaultJob
+
+// **************************
+// Benchmark: Request.MainRequest: DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "60763fde-b18f-42f1-b479-cebb7d380e76.dll" --benchmarkName "RestClientInvest.Request.MainRequest" --job "Default" --benchmarkId 0 in C:\Users\ujayn\Source\Repos\RestClientInvest\RestClientInvest\bin\Release\netcoreapp3.1\60763fde-b18f-42f1-b479-cebb7d380e76\bin\Release\netcoreapp3.1
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.1.0 (CoreCLR 4.700.19.56402, CoreFX 4.700.19.56404), X64 RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 239500.00 ns, 239.5000 us/op
+826919167-739-966-304636992436-521
+-999-558396986670-262-953-768123901
+85017-831-916-158745963296-643-991
+-428529999551-404-988-663270956762
+-132-905-846-8836912149-751-961-287
+650990420-536-999-543412989656-279
+-958-7561419098410-841-909-141756
+958279-657-989-412544999536-420-990
+-650287961750-149-912-8368846905
+132-762-956-270663988403-551-999-529
+428991643-296-963-745158916831-17
+-850-901-123768953262-670-986-395558
+999521-436-992-636304966739-167-920
+-82626855897114-773-951-253676985
+387-566-999-513444993629-313-968-733
+176923821-35-860-893-105779948245
+-683-983-379573999506-452-994-622321
+970727-184-926-8164486488997-785
+-945-236689981371-580-998-498459995
+615-330-972-720193930811-53-869-885
+-88790942227-696-980-363587998490
+-467-996-608338974714-202-933-80662
+87388179-795-939-219702978354-595
+-997-483475997601-346-976-708210936
+801-70-877-877-70801936210-708-976
+-346602997475-483-997-594355978702
+-219-939-7957988187361-806-933-202
+714974338-609-996-467491998587-363
+-980-695228942790-88-885-868-52811
+930193-721-972-329616995459-498-998
+-580371981689-236-945-78497890864
+44-816-926-184727970321-623-994-451
+506999573-379-983-683245948779-106
+-894-860-35821923175-733-968-313629
+993444-514-999-566387985676-253-951
+-77311489785526-826-919-167739966
+304-636-992-436521999558-396-986-670
+262953768-123-901-850-17831916158
+-745-963-296643991428-529-999-551404
+988663-271-956-7621329058468-836
+-912-149751961287-650-990-420536999
+543-412-989-656279958756-141-909-841
+0841909141-756-958-279657989412
+-544-999-536420990650-288-961-750149
+912836-8-846-905-132762956270-663
+-988-403551999528-428-991-643296963
+745-158-916-83117850901123-768-953
+-262670986395-558-999-521436992636
+-304-966-739167920826-26-855-897-114
+773951253-676-985-387566999513-444
+-993-629313968733-176-923-82135860
+893105-779-948-245683983379-573-999
+-506452994622-321-970-727184926816
+-44-864-889-97785945236-689-981-371
+580998498-460-995-615330972720-193
+-930-8115386988588-790-942-227696
+980363-587-998-490467996608-338-974
+-714202933806-62-873-881-79795939
+219-702-978-354595997483-475-997-601
+346976708-210-936-8017087787770
+-801-936-210708976346-602-997-475483
+997594-355-978-702219939795-79-881
+-873-61806933202-714-974-338609996
+467-491-998-587363980695-228-942-790
+8888586852-811-930-193721972329
+-616-995-459498998580-371-981-689236
+945784-97-890-864-44816926184-727
+-970-321623994451-506-999-573379983
+683-245-948-77910689485935-821-923
+-175733968313-630-993-443514999565
+-387-985-676253951773-114-897-855-26
+826919167-739-966-304636992436-521
+-999-558396986670-262-953-768123901
+85017-831-916-158745963296-643-991
+-428529999551-404-988-663271956762
+-132-905-846-8836912149-751-961-287
+650990420-536-999-543412989656-279
+-958-7561419098410-841-909-140756
+958279-657-989-411544999536-420-990
+-650288961750-150-913-8369846905
+132-762-956-270663988403-551-999-528
+428991643-296-963-745158916831-17
+-850-901-123768953262-670-986-395558
+999521-436-992-636304966739-167-920
+-82626855897114-773-951-253676985
+387-566-999-513444993629-313-968-733
+176923821-35-860-893-105779948245
+-683-983-379573999506-452-994-622321
+970727-184-926-8164486488997-785
+-945-236689981371-580-998-498460995
+615-330-972-720193930811-53-869-885
+-88790942227-696-980-363587998490
+-467-996-608338974714-202-933-80662
+87388179-795-939-219702978354-595
+-997-483475997601-346-976-708210936
+801-70-877-877-70801936210-708-976
+-346602997475-483-997-594355978702
+-219-939-7957988187361-806-933-201
+715974338-609-996-467491998587-363
+-980-695228942790-88-886-868-52811
+WorkloadJitting  1: 1 op, 15313368000.00 ns, 15.3134 s/op
+
+// Wrong assembly binding redirects for System.Net.Http.resources, Version=4.2.2.0, Culture=en-US, PublicKeyToken=b03f5f7f11d50a3a.
+// Wrong assembly binding redirects for System.Net.Http.resources, Version=4.2.2.0, Culture=en, PublicKeyToken=b03f5f7f11d50a3a.
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.InvalidOperationException: This instance has already started one or more requests. Properties can only be modified before sending the first request.
+   at System.Net.Http.HttpClient.CheckDisposedOrStarted()
+   at System.Net.Http.HttpClient.set_BaseAddress(Uri value)
+   at RestClientInvest.Request.MainRequest() in C:\Users\ujayn\Source\Repos\RestClientInvest\RestClientInvest\Request.cs:line 33
+   at BenchmarkDotNet.Autogenerated.Runnable_0.WorkloadActionNoUnroll(Int64 invokeCount) in C:\Users\ujayn\Source\Repos\RestClientInvest\RestClientInvest\bin\Release\netcoreapp3.1\60763fde-b18f-42f1-b479-cebb7d380e76\60763fde-b18f-42f1-b479-cebb7d380e76.notcs:line 746
+   at BenchmarkDotNet.Engines.Engine.RunIteration(IterationData data)
+   at BenchmarkDotNet.Engines.EngineStage.RunIteration(IterationMode mode, IterationStage stage, Int32 index, Int64 invokeCount, Int32 unrollFactor)
+   at BenchmarkDotNet.Engines.EngineStage.Run(IStoppingCriteria criteria, Int64 invokeCount, IterationMode mode, IterationStage stage, Int32 unrollFactor)
+   at BenchmarkDotNet.Engines.EngineWarmupStage.Run(Int64 invokeCount, IterationMode iterationMode, Int32 unrollFactor, RunStrategy runStrategy)
+   at BenchmarkDotNet.Engines.EngineWarmupStage.RunWorkload(Int64 invokeCount, Int32 unrollFactor, RunStrategy runStrategy)
+   at BenchmarkDotNet.Engines.Engine.Run()
+   at BenchmarkDotNet.Autogenerated.Runnable_0.Run(IHost host, String benchmarkName) in C:\Users\ujayn\Source\Repos\RestClientInvest\RestClientInvest\bin\Release\netcoreapp3.1\60763fde-b18f-42f1-b479-cebb7d380e76\60763fde-b18f-42f1-b479-cebb7d380e76.notcs:line 167
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in C:\Users\ujayn\Source\Repos\RestClientInvest\RestClientInvest\bin\Release\netcoreapp3.1\60763fde-b18f-42f1-b479-cebb7d380e76\60763fde-b18f-42f1-b479-cebb7d380e76.notcs:line 48
+// AfterAll
+ExitCode != 0
+// Benchmark Process 46856 has exited with code -1
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts\results\RestClientInvest.Request-report.csv
+  BenchmarkDotNet.Artifacts\results\RestClientInvest.Request-report-github.md
+  BenchmarkDotNet.Artifacts\results\RestClientInvest.Request-report.html
+
+// * Detailed results *
+Request.MainRequest: DefaultJob
+Runtime = ; GC = 
+There are not any results runs
+
+// * Summary *
+
+BenchmarkDotNet=v0.12.0, OS=Windows 10.0.17763.973 (1809/October2018Update/Redstone5)
+Intel Core i7-9750H CPU 2.60GHz, 1 CPU, 12 logical and 6 physical cores
+.NET Core SDK=3.1.100
+  [Host] : .NET Core 3.1.0 (CoreCLR 4.700.19.56402, CoreFX 4.700.19.56404), X64 RyuJIT  [AttachedDebugger]
+
+
+|      Method | Mean | Error | Min | Max |
+|------------ |-----:|------:|----:|----:|
+| MainRequest |   NA |    NA |  NA |  NA |
+
+Benchmarks with issues:
+  Request.MainRequest: DefaultJob
+
+// * Warnings *
+Environment
+  Summary -> Benchmark was executed with attached debugger
+
+// * Legends *
+  Mean  : Arithmetic mean of all measurements
+  Error : Half of 99.9% confidence interval
+  Min   : Minimum
+  Max   : Maximum
+  1 ns  : 1 Nanosecond (0.000000001 sec)
+
+// ***** BenchmarkRunner: End *****
+// ** Remained 0 benchmark(s) to run **
+Run time: 00:00:15 (15.88 sec), executed benchmarks: 1
+
+Global total time: 00:00:19 (19.22 sec), executed benchmarks: 1
+// * Artifacts cleanup *

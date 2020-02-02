@@ -1,0 +1,148 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 1 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet restore  /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 in C:\Users\ujayn\Source\Repos\RestClientInvest\RestClientInvest\bin\Release\netcoreapp3.1\2e62c743-f1cf-4441-8a23-369591e92f8c
+// command took 1.3s and exited with 0
+// start dotnet build -c Release  --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 in C:\Users\ujayn\Source\Repos\RestClientInvest\RestClientInvest\bin\Release\netcoreapp3.1\2e62c743-f1cf-4441-8a23-369591e92f8c
+// command took 1.87s and exited with 0
+// ***** Done, took 00:00:03 (3.38 sec)   *****
+// Found 1 benchmarks:
+//   Request.MainRequest: DefaultJob
+
+// **************************
+// Benchmark: Request.MainRequest: DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "2e62c743-f1cf-4441-8a23-369591e92f8c.dll" --benchmarkName "RestClientInvest.Request.MainRequest" --job "Default" --benchmarkId 0 in C:\Users\ujayn\Source\Repos\RestClientInvest\RestClientInvest\bin\Release\netcoreapp3.1\2e62c743-f1cf-4441-8a23-369591e92f8c\bin\Release\netcoreapp3.1
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 3.1.0 (CoreCLR 4.700.19.56402, CoreFX 4.700.19.56404), X64 RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 231900.00 ns, 231.9000 us/op
+826 919 167 -739 -966 -304 636 992 436 -521 -999 -558 396 986 670 -262 -953 -768 123 901 
+850 17 -831 -916 -158 745 963 296 -643 -991 -428 529 999 551 -404 -988 -663 270 956 762 
+-132 -905 -846 -8 836 912 149 -751 -961 -287 650 990 420 -536 -999 -543 412 989 656 -279 
+-958 -756 141 909 841 0 -841 -909 -141 756 958 279 -657 -989 -412 544 999 536 -420 -990 
+-650 287 961 750 -149 -912 -836 8 846 905 132 -762 -956 -270 663 988 403 -551 -999 -529 
+428 991 643 -296 -963 -745 158 916 831 -17 -850 -901 -123 768 953 262 -670 -986 -395 558 
+999 521 -436 -992 -636 304 966 739 -167 -920 -826 26 855 897 114 -773 -951 -253 676 985 
+387 -566 -999 -513 444 993 629 -313 -968 -733 176 923 821 -35 -860 -893 -105 779 948 245 
+-683 -983 -379 573 999 506 -452 -994 -622 321 970 727 -184 -926 -816 44 864 889 97 -785 
+-945 -236 689 981 371 -580 -998 -498 459 995 615 -330 -972 -720 193 930 811 -53 -869 -885 
+-88 790 942 227 -696 -980 -363 587 998 490 -467 -996 -608 338 974 714 -202 -933 -806 62 
+873 881 79 -795 -939 -219 702 978 354 -595 -997 -483 475 997 601 -346 -976 -708 210 936 
+801 -70 -877 -877 -70 801 936 210 -708 -976 -346 602 997 475 -483 -997 -594 355 978 702 
+-219 -939 -795 79 881 873 61 -806 -933 -202 714 974 338 -609 -996 -467 491 998 587 -363 
+-980 -695 228 942 790 -88 -885 -868 -52 811 930 193 -721 -972 -329 616 995 459 -498 -998 
+-580 371 981 689 -236 -945 -784 97 890 864 44 -816 -926 -184 727 970 321 -623 -994 -451 
+506 999 573 -379 -983 -683 245 948 779 -106 -894 -860 -35 821 923 175 -733 -968 -313 629 
+993 444 -514 -999 -566 387 985 676 -253 -951 -773 114 897 855 26 -826 -919 -167 739 966 
+304 -636 -992 -436 521 999 558 -396 -986 -670 262 953 768 -123 -901 -850 -17 831 916 158 
+-745 -963 -296 643 991 428 -529 -999 -551 404 988 663 -271 -956 -762 132 905 846 8 -836 
+-912 -149 751 961 287 -650 -990 -420 536 999 543 -412 -989 -656 279 958 756 -141 -909 -841 
+0 841 909 141 -756 -958 -279 657 989 412 -544 -999 -536 420 990 650 -288 -961 -750 149 
+912 836 -8 -846 -905 -132 762 956 270 -663 -988 -403 551 999 528 -428 -991 -643 296 963 
+745 -158 -916 -831 17 850 901 123 -768 -953 -262 670 986 395 -558 -999 -521 436 992 636 
+-304 -966 -739 167 920 826 -26 -855 -897 -114 773 951 253 -676 -985 -387 566 999 513 -444 
+-993 -629 313 968 733 -176 -923 -821 35 860 893 105 -779 -948 -245 683 983 379 -573 -999 
+-506 452 994 622 -321 -970 -727 184 926 816 -44 -864 -889 -97 785 945 236 -689 -981 -371 
+580 998 498 -460 -995 -615 330 972 720 -193 -930 -811 53 869 885 88 -790 -942 -227 696 
+980 363 -587 -998 -490 467 996 608 -338 -974 -714 202 933 806 -62 -873 -881 -79 795 939 
+219 -702 -978 -354 595 997 483 -475 -997 -601 346 976 708 -210 -936 -801 70 877 877 70 
+-801 -936 -210 708 976 346 -602 -997 -475 483 997 594 -355 -978 -702 219 939 795 -79 -881 
+-873 -61 806 933 202 -714 -974 -338 609 996 467 -491 -998 -587 363 980 695 -228 -942 -790 
+88 885 868 52 -811 -930 -193 721 972 329 -616 -995 -459 498 998 580 -371 -981 -689 236 
+945 784 -97 -890 -864 -44 816 926 184 -727 -970 -321 623 994 451 -506 -999 -573 379 983 
+683 -245 -948 -779 106 894 859 35 -821 -923 -175 733 968 313 -630 -993 -443 514 999 565 
+-387 -985 -676 253 951 773 -114 -897 -855 -26 826 919 167 -739 -966 -304 636 992 436 -521 
+-999 -558 396 986 670 -262 -953 -768 123 901 850 17 -831 -916 -158 745 963 296 -643 -991 
+-428 529 999 551 -404 -988 -663 271 956 762 -132 -905 -846 -8 836 912 149 -751 -961 -287 
+650 990 420 -536 -999 -543 412 989 656 -279 -958 -756 141 909 841 0 -841 -909 -140 756 
+958 279 -657 -989 -411 544 999 536 -420 -990 -650 288 961 750 -150 -913 -836 9 846 905 
+132 -762 -956 -270 663 988 403 -551 -999 -528 428 991 643 -296 -963 -745 158 916 831 -17 
+-850 -901 -123 768 953 262 -670 -986 -395 558 999 521 -436 -992 -636 304 966 739 -167 -920 
+-826 26 855 897 114 -773 -951 -253 676 985 387 -566 -999 -513 444 993 629 -313 -968 -733 
+176 923 821 -35 -860 -893 -105 779 948 245 -683 -983 -379 573 999 506 -452 -994 -622 321 
+970 727 -184 -926 -816 44 864 889 97 -785 -945 -236 689 981 371 -580 -998 -498 460 995 
+615 -330 -972 -720 193 930 811 -53 -869 -885 -88 790 942 227 -696 -980 -363 587 998 490 
+-467 -996 -608 338 974 714 -202 -933 -806 62 873 881 79 -795 -939 -219 702 978 354 -595 
+-997 -483 475 997 601 -346 -976 -708 210 936 801 -70 -877 -877 -70 801 936 210 -708 -976 
+-346 602 997 475 -483 -997 -594 355 978 702 -219 -939 -795 79 881 873 61 -806 -933 -201 
+715 974 338 -609 -996 -467 491 998 587 -363 -980 -695 228 942 790 -88 -886 -868 -52 811 
+WorkloadJitting  1: 1 op, 16062051000.00 ns, 16.0621 s/op
+
+// Wrong assembly binding redirects for System.Net.Http.resources, Version=4.2.2.0, Culture=en-US, PublicKeyToken=b03f5f7f11d50a3a.
+// Wrong assembly binding redirects for System.Net.Http.resources, Version=4.2.2.0, Culture=en, PublicKeyToken=b03f5f7f11d50a3a.
+
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation.
+ ---> System.InvalidOperationException: This instance has already started one or more requests. Properties can only be modified before sending the first request.
+   at System.Net.Http.HttpClient.CheckDisposedOrStarted()
+   at System.Net.Http.HttpClient.set_BaseAddress(Uri value)
+   at RestClientInvest.Request.MainRequest() in C:\Users\ujayn\Source\Repos\RestClientInvest\RestClientInvest\Request.cs:line 33
+   at BenchmarkDotNet.Autogenerated.Runnable_0.WorkloadActionNoUnroll(Int64 invokeCount) in C:\Users\ujayn\Source\Repos\RestClientInvest\RestClientInvest\bin\Release\netcoreapp3.1\2e62c743-f1cf-4441-8a23-369591e92f8c\2e62c743-f1cf-4441-8a23-369591e92f8c.notcs:line 746
+   at BenchmarkDotNet.Engines.Engine.RunIteration(IterationData data)
+   at BenchmarkDotNet.Engines.EngineStage.RunIteration(IterationMode mode, IterationStage stage, Int32 index, Int64 invokeCount, Int32 unrollFactor)
+   at BenchmarkDotNet.Engines.EngineStage.Run(IStoppingCriteria criteria, Int64 invokeCount, IterationMode mode, IterationStage stage, Int32 unrollFactor)
+   at BenchmarkDotNet.Engines.EngineWarmupStage.Run(Int64 invokeCount, IterationMode iterationMode, Int32 unrollFactor, RunStrategy runStrategy)
+   at BenchmarkDotNet.Engines.EngineWarmupStage.RunWorkload(Int64 invokeCount, Int32 unrollFactor, RunStrategy runStrategy)
+   at BenchmarkDotNet.Engines.Engine.Run()
+   at BenchmarkDotNet.Autogenerated.Runnable_0.Run(IHost host, String benchmarkName) in C:\Users\ujayn\Source\Repos\RestClientInvest\RestClientInvest\bin\Release\netcoreapp3.1\2e62c743-f1cf-4441-8a23-369591e92f8c\2e62c743-f1cf-4441-8a23-369591e92f8c.notcs:line 167
+   --- End of inner exception stack trace ---
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Object[] arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeMethodInfo.Invoke(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.MethodBase.Invoke(Object obj, Object[] parameters)
+   at BenchmarkDotNet.Autogenerated.UniqueProgramName.AfterAssemblyLoadingAttached(String[] args) in C:\Users\ujayn\Source\Repos\RestClientInvest\RestClientInvest\bin\Release\netcoreapp3.1\2e62c743-f1cf-4441-8a23-369591e92f8c\2e62c743-f1cf-4441-8a23-369591e92f8c.notcs:line 48
+// AfterAll
+ExitCode != 0
+// Benchmark Process 23100 has exited with code -1
+No more Benchmark runs will be launched as NO measurements were obtained from the previous run!
+
+
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts\results\RestClientInvest.Request-report.csv
+  BenchmarkDotNet.Artifacts\results\RestClientInvest.Request-report-github.md
+  BenchmarkDotNet.Artifacts\results\RestClientInvest.Request-report.html
+
+// * Detailed results *
+Request.MainRequest: DefaultJob
+Runtime = ; GC = 
+There are not any results runs
+
+// * Summary *
+
+BenchmarkDotNet=v0.12.0, OS=Windows 10.0.17763.973 (1809/October2018Update/Redstone5)
+Intel Core i7-9750H CPU 2.60GHz, 1 CPU, 12 logical and 6 physical cores
+.NET Core SDK=3.1.100
+  [Host] : .NET Core 3.1.0 (CoreCLR 4.700.19.56402, CoreFX 4.700.19.56404), X64 RyuJIT  [AttachedDebugger]
+
+
+|      Method | Mean | Error | Min | Max |
+|------------ |-----:|------:|----:|----:|
+| MainRequest |   NA |    NA |  NA |  NA |
+
+Benchmarks with issues:
+  Request.MainRequest: DefaultJob
+
+// * Warnings *
+Environment
+  Summary -> Benchmark was executed with attached debugger
+
+// * Legends *
+  Mean  : Arithmetic mean of all measurements
+  Error : Half of 99.9% confidence interval
+  Min   : Minimum
+  Max   : Maximum
+  1 ns  : 1 Nanosecond (0.000000001 sec)
+
+// ***** BenchmarkRunner: End *****
+// ** Remained 0 benchmark(s) to run **
+Run time: 00:00:16 (16.61 sec), executed benchmarks: 1
+
+Global total time: 00:00:19 (19.99 sec), executed benchmarks: 1
+// * Artifacts cleanup *
