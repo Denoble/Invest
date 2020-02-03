@@ -66,7 +66,7 @@ namespace RestClientInvest
            string stringData = JsonConvert.SerializeObject(md5);
             var contentData = new StringContent(stringData, System.Text.Encoding.UTF8,"application/json");
             HttpResponseMessage response = client.PostAsync("api/numbers/validate", contentData).Result;
-            Console.WriteLine("JSON TO POST = {0}", stringData);
+           // Console.WriteLine("JSON TO POST = {0}", stringData);
             if (response.IsSuccessStatusCode)
              {
                  var content = response.Content.ReadAsStringAsync().Result;
