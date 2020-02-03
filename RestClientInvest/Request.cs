@@ -39,30 +39,18 @@ namespace RestClientInvest
                 Console.WriteLine("Initializations: Successful");
                 Parallel.For(0, a.Length, i =>
                 {
-
-                    DeserializeMatrixA(i);
-
+                    GetDataSetA(i);
                 });
                 Parallel.For(0, b.Length, i =>
                 {
-
-
-                    DeserializeMatrixB(i);
+                    GetDataSetB(i);
                 });
-
-                int[][] tempC = multipleMatrix(a, b, c);
-
-                string rows = ResultAndRow(tempC);
-               
-                string finalMD5 = ConvertToMD5(rows);
-                string fmd5 = GetMd5Hash(rows);
-                var hashedString = new MD5Object();
-                PostResult(hashedString);
+                int[][] resultMatrix = multiplyMatrix(a, b, c);
+                string resMatrixElementString = ConcatenateResultMatrixElements(resultMatrix);
+                string md5tHashedMatrixString = HashStringIntoMD5(resMatrixElementString);
+                PostResult(md5tHashedMatrixString);
             }
-
-
-
-
+        
         }
         private static void instanitateArrays(int[][] a, int[][] b, int[][] c)
         {
@@ -70,21 +58,15 @@ namespace RestClientInvest
                 a[i] = new int[1000];
                 b[i] = new int[1000];
                 c[i] = new int[1000];
-              
-                
-            });
+              });
            
         }
-        private static void PostResult(MD5Object md5)
+        private static void PostResult(string md5)
         {
-           
-            
-             
-            string stringData = JsonConvert.SerializeObject(md5);
+           string stringData = JsonConvert.SerializeObject(md5);
             var contentData = new StringContent(stringData, System.Text.Encoding.UTF8,"application/json");
             HttpResponseMessage response = client.PostAsync("api/numbers/validate", contentData).Result;
-            
-
+            Console.WriteLine("JSON TO POST = {0}", stringData);
             if (response.IsSuccessStatusCode)
              {
                  var content = response.Content.ReadAsStringAsync().Result;
@@ -95,25 +77,22 @@ namespace RestClientInvest
              else
                  Console.WriteLine("Post Request Error");
         }
-           private static void DeserializeMatrixA(int i)
+           private static void GetDataSetA(int i)
            {
-
-               StringBuilder sb = new StringBuilder();
+             StringBuilder sb = new StringBuilder();
                sb.Append("api/numbers/A/row/");
                sb.Append(i);
                string url = sb.ToString();
-             
-               var response = client.GetAsync(url).Result;
+                var response = client.GetAsync(url).Result;
                var content = response.Content.ReadAsStringAsync().Result;
                if (response.IsSuccessStatusCode)
                {
-
-                   var obj = JsonConvert.DeserializeObject<JSONObject>(content);
-                   a[i] = obj.Value;
+                    var obj = JsonConvert.DeserializeObject<JSONObject>(content);
+                    a[i] = obj.Value;
             
                }
            }
-           private static void DeserializeMatrixB(int i)
+           private static void GetDataSetB(int i)
            {
                StringBuilder sb = new StringBuilder();
                sb.Append("api/numbers/B/row/");
@@ -133,7 +112,7 @@ namespace RestClientInvest
 
 
        
-       public static int[][] multipleMatrix(int[][]a,int[][]b, int[][] c)
+       public static int[][] multiplyMatrix(int[][]a,int[][]b, int[][] c)
         {
             Parallel.For(0, a.Length, i => { 
 
@@ -150,7 +129,7 @@ namespace RestClientInvest
             return c;
             
         }
-     public   static string ResultAndRow(int[][]c)
+     public   static string ConcatenateResultMatrixElements(int[][]c)
         {
             StringBuilder sb = new StringBuilder();
             for(int i = 0; i < c.Length; i++)
@@ -159,71 +138,19 @@ namespace RestClientInvest
                 {
                     sb.Append(c[i][j]);
                 }
-                //string s = string.Join("", c[i]);
                 
                
             }
             return sb.ToString();
         }
-     public   static string ResultAndCol(int[][]c)
-        {
-            StringBuilder sb = new StringBuilder();
-            StringBuilder cb = null;
-            
-            for (int i = 0; i < c[0].Length; i++)
-            {
-                cb = new StringBuilder();
-
-                for (int j = 0; j < c.Length; j++)
-                {
-                    cb.Append(c[j][i]);
-                }
-               
-                sb.Append(cb.ToString());
-            
-            }
-            return sb.ToString();
-        }
-        static string ResultToString(int[][] c)
-        {
-           
-            string result = "";
-
-            for (int i = 0;i< c.Length;i++)
-              {
-               result+= string.Join("", c[i]);
-              }
-           
-            return result;
-        }
-      public  static string ConvertToMD5(string str)
+    
+      public  static string HashStringIntoMD5(string str)
         {
             var md5Hash = MD5.Create();
             var sourceBytes = Encoding.UTF8.GetBytes(str);
             var hashBytes = md5Hash.ComputeHash(sourceBytes);
-
             var hash = BitConverter.ToString(hashBytes).Replace("-", string.Empty);
-
             return hash;
         }
-        public static string GetMd5Hash(string input)
-        {
-            MD5 md5Hash = MD5.Create();
-            byte[] data = md5Hash.ComputeHash(Encoding.UTF8.GetBytes(input));
-            StringBuilder sBuilder = new StringBuilder();
-
-            // Loop through each byte of the hashed data 
-            // and format each one as a hexadecimal string.
-            for (int i = 0; i < data.Length; i++)
-            {
-                sBuilder.Append(data[i].ToString("x2"));
-            }
-
-            // Return the hexadecimal string.
-            return sBuilder.ToString();
-        }
-
-
-
     }
 }

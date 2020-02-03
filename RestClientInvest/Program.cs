@@ -68,7 +68,7 @@ namespace RestClientInvest
          {
              MD5 md5Hash = MD5.Create();
              // Hash the input.
-             string hashOfInput = Request.GetMd5Hash( input);
+             string hashOfInput = Request.HashStringIntoMD5( input);
 
              // Create a StringComparer an compare the hashes.
              StringComparer comparer = StringComparer.OrdinalIgnoreCase;
